@@ -4,7 +4,7 @@
 require_once "db_connect_blog.php";
 $dbh = db_connect();
 
-//noを降順ににてpostを取得
+//noを降順にてpostを取得
 $stmt = $dbh->query("SELECT * FROM post ORDER BY no DESC");
 $posts = $stmt->fetchAll();
 

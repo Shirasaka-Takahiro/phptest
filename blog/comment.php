@@ -17,7 +17,7 @@ if (@$_POST['submit']) {
     //nameがないときにエラー
     if (!$name) $error .='名前がありません。<br>';
     //コメントがないときにエラー
-    if (!$content) $erro .='コメントがありません。<br>';
+    if (!$content) $error .='コメントがありません。<br>';
     //エラーがないときにDBへ登録
     $stmt = $dbh->prepare("INSERT INTO comment(post_no,name,content) VALUES(?,?,?)");
     $stmt -> execute(array($post_no,$name,$content));
