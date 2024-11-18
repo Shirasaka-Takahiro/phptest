@@ -6,6 +6,11 @@
 <link rel="stylesheet" href="kanri.css">
 </head>
 <body>
+<?php if (isset($_SESSION['id'])) {?>
+    <div class="base">
+        <a href="../users/logout.php">ログアウト</a>
+        <h1><?php echo $msg ?></h1>
+    </div>
     <table>
         <?php foreach ($goods as $g) { ?>
             <tr>
@@ -29,5 +34,6 @@
         <a href="insert.php">新規追加</a>
         <a href="../index.php" target="_blank">サイト確認</a>
     </div>
+<?php }; ?>
 </body>
 </html>
