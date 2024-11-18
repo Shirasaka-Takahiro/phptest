@@ -7,6 +7,10 @@
 </head>
 <body>
 <h1>Noodle Shop</h1>
+<div class="base">
+  <a href="./users/show_tmp_register_form.php" target="_blank">会員登録</a>
+  <a href="./users/login.php" target="_blank">ログイン</a>
+</div>
 <table>
   <?php foreach ($goods as $g) { ?>
     <tr>

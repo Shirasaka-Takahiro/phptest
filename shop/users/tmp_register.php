@@ -77,7 +77,7 @@ try {
     EOD;
 
     //From
-    $From = "From: user@smtp.example.com";
+    $headers = "From: user@smtp.example.com";
     //text/htmlを指定し、html形式で送ることも可能
     $headers .= "Content-Type : text/plain";
 
