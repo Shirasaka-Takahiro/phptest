@@ -7,11 +7,12 @@
 
   //セッション開始
   session_start();
-
-  //emailの格納
+  
+  //ログイン中のユーザーID
+  $user_id = $_SESSION['user_id']; 
   $email = $_SESSION['email'];
 
-  $stmt = $dbh->query("SELECT * FROM goods");
+  $stmt = $dbh->query("SELECT * FROM goods WHERE user_id = $user_id");
   $goods = $stmt->fetchAll();
   require 't_index.php';
 ?>

@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="kanri.css">
 </head>
 <body>
-<?php if (isset($_SESSION['id'])) {?>
+<?php if (isset($_SESSION['user_id'])) {?>
     <div class="base">
         <a href="../users/logout.php">ログアウト</a>
-        <h1><?php echo $msg ?></h1>
+        <p>こんにちは <?php echo $email; ?> さん</p>
     </div>
     <table>
         <?php foreach ($goods as $g) { ?>

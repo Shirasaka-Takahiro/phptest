@@ -56,7 +56,7 @@ try {
 
     //4. パスワードが一致し、ステータスもpublic
     if (password_verify($input_password, $user['password']) && $user['status'] == 'public') {
-        $_SESSION['id'] = $user['id'];
+        $_SESSION['user_id'] = $user['id'];
         $_SESSION['email'] = $user['email']; 
         $msg = 'ログインしました。';
         header('Location: ../kanri/index.php');

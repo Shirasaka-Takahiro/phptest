@@ -1,7 +1,9 @@
 <?php
 
 //セッション開始
-session_start();
+if (!isset($_SESSION['user_id'])) {
+    session_start();
+}
 
 // 画像タグの処理
 function img_tag($code) {

@@ -10,3 +10,13 @@ CREATE TABLE `users` (
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP  ON UPDATE CURRENT_TIMESTAMP
 );
+
+CREATE TABLE goods(
+  code SERIAL,
+  name TEXT,
+  price INT,
+  comment TEXT,
+  user_id int unsigned NOT NULL,
+);
+
+ALTER TABLE goods ADD CONSTRAINT fk_goods_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
